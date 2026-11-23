@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Experiments | Jeremy</title>
+    <link rel="icon" href="media/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume and Skills</a></li>
+                <li><a href="experiments.html" aria-current="page">Experiments</a></li>
+                <li><a href="form-no-js.html">Form</a></li>
+                <li><a href="form-with-js.html">Form JS</a></li>
+            </ul>
+        </nav>
+        <button type="button" id="theme-toggle" hidden>Switch to dark</button>
+        <h1>Experiments</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Template</h2>
+            <p>The fragment below is defined in a <code>template</code> element, so the browser keeps it out of the
+                rendered
+                page until a script clones it.</p>
+            <template id="project-template">
+                <article>
+                    <h3>Project title <status-badge data-status="in-progress">In progress</status-badge></h3>
+                    <p>Project description goes here.</p>
+                    <p><a href="#">GitHub repository</a></p>
+                </article>
+            </template>
+        </section>
+        <section>
+            <h2>Audio</h2>
+            <p>A short audio clip using the <code>audio</code> element.</p>
+            <audio controls>
+                <source src="media/song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+        <section>
+            <h2>Video</h2>
+            <p>A short video clip using the <code>video</code> element.</p>
+            <video width="320" height="320" controls>
+                <source src="media/dunk.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+        <section>
+            <h2>Canvas</h2>
+            <p>A circle drawn with the <code>canvas</code> element and a short script.</p>
+            <canvas id="circle-demo" width="200" height="200">
+                Your browser does not support the canvas element.
+            </canvas>
+            <script>
+                const canvas = document.getElementById("circle-demo");
+                const ctx = canvas.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(100, 100, 60, 0, 2 * Math.PI);
+                ctx.fillStyle = "steelblue";
+                ctx.fill();
+                ctx.stroke();
+            </script>
+            <noscript>
+                <p>This canvas demo needs JavaScript, which is currently turned off.</p>
+            </noscript>
+        </section>
+        <hello-world></hello-world>
+        <script>
+            class HelloWorld extends HTMLElement {
+                connectedCallback() {
+                    console.log("Hello World!");
+                }
+            }
+            customElements.define("hello-world", HelloWorld);
+        </script>
+    </main>
+    <footer>
+        <p>Created by Jeremy Liu</p>
+    </footer>
+</body>
+
+</html>

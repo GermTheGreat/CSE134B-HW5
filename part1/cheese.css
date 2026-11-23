@@ -1,0 +1,66 @@
+/*Jeremy Liu*/
+/*https://github.com/GermTheGreat/CSE134B-HW3*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html {
+    margin: 0.0;
+    padding: 0.0;
+    font-size: 16px;
+}
+
+body {
+    color:black;
+    background-color: rgb(255, 208, 0);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.latin {
+  font-style: italic;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+#warning {
+    /* Cascade in Action */
+    background-color: rgb(255, 0, 0);
+}
+
+#warning {
+    /* Cascade in Action */
+    background-color: rgb(255, 128, 0);
+    /*The later value wins because it comes last in the cascade.
+    This is to resolve conflicts between ties, as earlier declarations are 
+    overridden by later ones, where we might want more specific 
+    styling to occur for specific parts.This is a fundamental aspect of CSS cascade.*/
+}
+
+blockquote {
+    border: 4px solid rgb(255, 128, 0);
+    padding: 10px;
+    margin: 20px 0;
+}
+
+a:hover {
+  color: #ff0080;
+  text-decoration: underline;
+}
+
+a:focus, input:focus, button:focus{
+    outline: 2px solid rgb(255, 128, 0);
+}

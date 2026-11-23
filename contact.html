@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Jeremy</title>
+    <link rel="icon" href="media/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+                <li><a href="resume.html">Resume and Skills</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="form-no-js.html">Form</a></li>
+                <li><a href="form-with-js.html">Form JS</a></li>
+            </ul>
+        </nav>
+        <button type="button" id="theme-toggle" hidden>Switch to dark</button>
+        <h1>Contact</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Contact Info</h2>
+            <p>Email: <strong><a href="mailto:jel139@ucsd.edu">jel139@ucsd.edu</a></strong>.</p>
+            <p>Phone: (909) 367-4623</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429155.64985715755!2d-117.43742247853876!3d32.82463302881226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530fad921e4b%3A0xd3a21fdfd15df79!2sSan%20Diego%2C%20CA!5e0!3m2!1sen!2sus!4v1792293964443!5m2!1sen!2sus"
+                width="320" height="400" title="Map of San Diego, California" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+        <dialog open>
+            <p><strong>Note:</strong> I usually reply within 2 business days.</p>
+            <form method="dialog">
+                <button type="submit">Close</button>
+            </form>
+        </dialog>
+        <form action="mailto:jel139@ucsd.edu" method="post" enctype="text/plain">
+            <fieldset>
+                <legend>Send me a message</legend>
+
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Send</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>Created by Jeremy Liu</p>
+    </footer>
+</body>
+
+</html>
