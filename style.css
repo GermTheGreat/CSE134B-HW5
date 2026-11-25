@@ -294,3 +294,22 @@ textarea:user-valid {
         animation: none;
     }
 }
+
+dog-viewer {
+    --dog-background: var(--background-color, white);
+    --dog-text: var(--text-color, black);
+    --dog-error: var(--error-color, #b00020);
+    background-color: var(--dog-background, white);
+    color: var(--dog-text, black);
+}
+
+dog-viewer [role="status"][data-state="error"]{
+    color: var(--dog-error, #b00020);
+}
+
+dog-viewer img {
+    display: block;
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+}
